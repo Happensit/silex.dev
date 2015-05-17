@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+</head>
+<body>
+<table width="710" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse; border:#cccccc 1px solid;">
+    <tr style="width: 100%">
+        <td border="0" style="border:none; text-align: center; padding: 10px 0; background: url('http://stifgroup.ru/design/default/img/bg-reviews.png') repeat scroll;"><img width="161" height="115" src="http://stifgroup.ru/design/default/img/logo.png" alt="logo"/></td>
+        {#<td border="0" style="border:none; width: 80%"><h2>А тут какой-то текст</h2></td>#}
+    </tr>
+    <tr><td border="0" style="border:none; text-align: center"><h3>Сообщение с верхней формы</h3></td></tr>
+    <tr><td border="0" style="border:none; margin-bottom: 24px; color: #444; font-size: 15px; padding: 10px 30px;">
+            <p>{{ data['name']|title }} хочет {{ data['action'] }} {{ data['type'] }}
+                стоимостью {{data['cost']}}</p>
+            <p>{{ data['subway']}}</p>
+            <p>Контактный номер {{ data['phone'] }}</p>
+        </td></tr>
+    <tr><td border="0" style="border:none; background-color: #a4c540; text-align: center; padding: 5px 0; color: #444;"><a style="text-decoration: none" href="http://stifgroup.ru">Stifgroup.ru</a></td></tr>
+</table>
+</body>
+</html>

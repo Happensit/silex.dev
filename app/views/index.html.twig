@@ -1,0 +1,814 @@
+{% extends 'layout.twig' %}
+{% block body %}
+    <div class="outer pg-front">
+        <nav class="sct-menu sct" id="sct-menu">
+            <div class="wrp mnh">
+                <ul class="row l">
+                    <li class="col"><a href="#sct-main">Как это работает</a></li>
+                    <li class="col"><a href="#sct-services">Услуги</a></li>
+                    <li class="col"><a href="#sct-trust">Преимущества</a></li>
+                    <li class="col"><a href="#sct-reviews">Отзывы</a></li>
+                    <li class="col"><a href="#sct-articles">Интересное</a></li>
+                    <li class="col"><a href="#sct-map">Контакты</a></li>
+                </ul>
+
+                <div class="soc r">
+                    <a rel="nofollow" href="http://vk.com/stifgroup" class="vk no-scroll"></a>
+                    <a rel="nofollow" href="#" class="skype no-scroll"></a>
+                    <a rel="nofollow" href="#" class="fb no-scroll"></a>
+                </div>
+                <div class="clr"></div>
+            </div>
+        </nav>
+        <div class="wrp sdat-wrp"><a href="#sct-services" class="sdat rght btn btn-yellow scroll-to">ХОЧУ СДАТЬ
+                ЖИЛЬЁ</a></div>
+
+        <div id="sct-hdr" class="sct-hdr sct">
+
+            <div class="Today_he_has_no_means">
+                <div class="He_is_alone_and_anonymous wrp">
+                    <header class="pg-hdr lrw">
+                        <a class="mnu-btn" href="#"><span></span></a>
+                        <div class="l lft">
+                            <a href="#" class="logo img">
+                                <img src="{{ asset('img/logo.png') }}" alt="" />
+                            </a>
+                            <div class="logo-ttl">
+                                Единый центр недвижимости
+                            </div>
+                        </div>
+                        <div class="r rght">
+                            <address class="address">
+                                <div class="phone">+7 <span>(812)</span> 985-22-44</div>
+                                <div class="phone">+7 <span>(812)</span> 387-22-33</div>
+                                <div class="city">Санкт-Петербург</div>
+                            </address>
+                        </div>
+                    </header>
+                    <div class="hdr-frm row">
+                        <div class="col lft">
+                            <div class="strs-1">
+                                <div class="str-1">Ищете жильё?</div>
+                                <div class="str-2">30 минут</div>
+                                <div class="str-3">и у нас есть вариант для вас</div>
+                                <div class="str-4">2 часа</div>
+                                <div class="str-5">и мы едем его смотреть</div>
+                            </div>
+
+                            <div class="btns">
+                                <a href="#sct-trust" class="btn btn-trans scroll-to">Почему я могу вам доверять?</a>
+                            </div>
+                        </div>
+                        <div class="col rght">
+                            <div class="strs-2">
+                                <div class="str-1">Отправьте заявку</div>
+                                <div class="str-2">и <span>через 30 минут</span> мы</div>
+                                <div class="str-3">предоставим вам варианты</div>
+                            </div>
+                            <div class="frm">
+                                <form id="order-frm" action="{{ path('ajaxOrderAction') }}" method="post">
+                                    <label for="type"><b>Хочу </b>
+                                    <a class="radio-text active" href="#order_action">снять</a> /
+                                    <a class="radio-text" href="#order_action">сдать</a>
+                                    </label>
+                                    {{ form_widget(orderform) }}
+                                    <button class="btn btn-green" id="order_Send">{{ 'Send'|trans() }}</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section id="sct-main" class="sct-main sct">
+            <aside class="carusel">
+                <ul class="lst gallery">
+                    <li class="itm">
+                        <div class="img l">
+                            <img src="http://stifgroup.ru/files/products/17920.82x82.jpg?788dfc7d4e8537183a7104b245a346a2" alt="" />
+                        </div>
+                        <div class="dsc">
+                            <h3 class="ttl">Ирина</h3>
+                            <div class="job">специалист по аренде квартир</div>
+                        </div>
+                    </li>
+                    <li class="itm">
+                        <div class="img l">
+                            <img src="http://stifgroup.ru/files/products/a1809fe8f8f17e6af95e5790c30785c2.82x82.jpg?23fb0fdc925033df025bf9554cf1cebd" alt="" />
+                        </div>
+                        <div class="dsc">
+                            <h3 class="ttl">Ольга</h3>
+                            <div class="job">менеджер по поиску недвижимости</div>
+                        </div>
+                    </li>
+                    <li class="itm">
+                        <div class="img l">
+                            <img src="http://stifgroup.ru/files/products/pricheska.82x82.jpg?e76b0357f4887f990e09cb819e4d8adf" alt="" />
+                        </div>
+                        <div class="dsc">
+                            <h3 class="ttl">Вера</h3>
+                            <div class="job">менеджер по работе с клиентами</div>
+                        </div>
+                    </li>
+                    <li class="itm">
+                        <div class="img l">
+                            <img src="http://stifgroup.ru/files/products/andriyankin_oleg_phot.82x82.jpg?0788fb464c63397ecea7472d887d3865" alt="" />
+                        </div>
+                        <div class="dsc">
+                            <h3 class="ttl">Олег</h3>
+                            <div class="job">специалист по элитным квартирам</div>
+                        </div>
+                    </li>
+                    <li class="itm">
+                        <div class="img l">
+                            <img src="http://stifgroup.ru/files/products/mu78kk_tkuwtrkde7rj8da2-small.82x82.jpg?9abfe03a6c9dd0f7b4ee3861bf9afd58" alt="" />
+                        </div>
+                        <div class="dsc">
+                            <h3 class="ttl">Татьяна</h3>
+                            <div class="job">специалист по аренде квартир</div>
+                        </div>
+                    </li>
+                    <li class="itm">
+                        <div class="img l">
+                            <img src="http://stifgroup.ru/files/products/img.82x82.jpg?0cd405169c84f133d7ce8c349bd8a780" alt="" />
+                        </div>
+                        <div class="dsc">
+                            <h3 class="ttl">Игорь</h3>
+                            <div class="job">специалист по загородной недвижимости</div>
+                        </div>
+                    </li>
+                    <li class="itm">
+                        <div class="img l">
+                            <img src="http://stifgroup.ru/files/products/igor.82x82.jpg?52bcede456331ef97777fe006f606934" alt="" />
+                        </div>
+                        <div class="dsc">
+                            <h3 class="ttl">Виктор</h3>
+                            <div class="job">специалист по продаже недвижимости</div>
+                        </div>
+                    </li>
+                </ul>
+            </aside>
+
+            <div class="wrp row">
+
+                <article class="col col-2">
+                    <h2 class="hdr-l">Как грамотно <span>снять жилье</span></h2>
+                    <div class="dsc typo lft">
+                        <b>Экономьте своё время.</b><br/>
+                        Не тратьте его на поиски по базам в Интернете, варианты быстро устаревают.<br/>
+                        <b>Сохраните свои деньги.</b><br/>
+                        Экономия на цене аренды может привести к большим потерям из-за мошенников.<br/>
+                        <br/>
+                        Позвоните нам: <span class="green big">+ 7 (812) 387-22-33</span> и уже через <span class="yellow big">30 минут</span> после звонка мы предложим варианты, а через <span
+                                class="yellow big">2 часа</span> Вы сможете вживую их посмотреть.
+                    </div>
+
+                    <div class="steps">
+                        <h3>Как это происходит?</h3>
+                        <ul class="lst">
+                            <li class="itm one">
+                                <div class="img"><img src="{{ asset('img/callus.png') }}" alt="" /></div>
+                                <div class="ttl"><span class="yellow">Вы звоните</span> нам</div>
+                            </li>
+                            <li class="itm two">
+                                <div class="img"><img src="{{ asset('img/wesearch.png') }}" alt=""/></div>
+                                <div class="ttl"><span class="green">Мы подбираем</span> варианты жилья</div>
+                            </li>
+                            <li class="clr-itm"></li>
+                            <li class="itm three">
+                                <div class="img"><img src="{{ asset('img/lookout.png') }}" alt=""/></div>
+                                <div class="ttl"><span class="light-grey">Едем с Вами</span> смотреть варианты</div>
+                            </li>
+                            <li class="itm four">
+                                <div class="img"><img src="{{ asset('img/payand.png') }}" alt=""/></div>
+                                <div class="ttl">Договор, оплата и <span class="grey">Вы дома</span></div>
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+                <div class="col col-1">
+                    <aside id="flat-slider" class="slider flat-slider">
+                        <section class="itm">
+                            <div class="img-wrp">
+                                <div class="img">
+                                    <img src="http://stifgroup.ru/files/products/flat01_7.372x248.jpg?3eded3e2a1c0c79f2247850228a10e6c" alt="" />
+                                </div>
+                                <div class="price">
+                                    25000 P / мес.
+                                </div>
+                            </div>
+                            <div class="dsc-wrp">
+                                <h3 class="ttl">1 к.кв. квартира</h3>
+                                <div class="subway">
+                                    ст.м. «Академическая»
+                                </div>
+                                <div class="dsc">
+                                    <p>Сдается на длительный срок 1 к.кв. квартира в 10ти минутах ходьбы от ст.м. &laquo;Академическая&raquo;,<br /> Хороший косметический ремонт сделан в 2014 году.. Имеется газовая плита, холодильник, ЖК-телевизор, чайник, посуда, стиральная машина, фен, гладильная доска.<br /> Спальные места - двуспальная кровать, диван. Интернет - Wi-Fi.<br /> Рядом располагается гипермаркет Призма, СемьЯ, Торговый центр, кинотеатр.<br /> Этаж: 2/16<br /> Общая площадь:35 кв.м.</p>
+                                </div>
+                                <div class="btns">
+                                    <a class="btn btn-green its-mine" href="#">Да, именно это я и ищу!</a>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="itm">
+                            <div class="img-wrp">
+                                <div class="img">
+                                    <img src="http://stifgroup.ru/files/products/flat02_1.372x248.jpg?be5a897b79281ca76a7005ab89ca4163" alt="" />
+                                </div>
+                                <div class="price">
+                                    23000 P / мес.
+                                </div>
+                            </div>
+                            <div class="dsc-wrp">
+                                <h3 class="ttl">1 комнатная квартира</h3>
+                                <div class="subway">
+                                    ст.м. «Проспект Большевиков»
+                                </div>
+                                <div class="dsc">
+                                    <p>Сдается на длительный срок 1 к.кв. в 15 минутах ходьбы от ст.м. &laquo;Проспект Большевиков&raquo;. Имеется все необходимое для комфортного проживания- кондиционер, три телевизора, DVD, холодильник, микроволновая печь, стиральная машина, посудомоечная машина, утюг, фен, необходимые бытовые принадлежности. Безлимитный Интернет - Wi-Fi.<br /> Этаж: 6/19<br /> Площадь: 38 кв.м.</p>
+                                </div>
+                                <div class="btns">
+                                    <a class="btn btn-green its-mine" href="#">Да, именно это я и ищу!</a>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="itm">
+                            <div class="img-wrp">
+                                <div class="img">
+                                    <img src="http://stifgroup.ru/files/products/flat03_1.372x248.jpg?3f679eb7c4c2dbecc32498a6a0e2939a" alt="" />
+                                </div>
+                                <div class="price">
+                                    24000 P / мес.
+                                </div>
+                            </div>
+                            <div class="dsc-wrp">
+                                <h3 class="ttl">1 к.кв. квартира</h3>
+                                <div class="subway">
+                                    ст.м. «Международная»
+                                </div>
+                                <div class="dsc">
+                                    <p>Сдается 1 к.кв. в 10 минутах ходьбы от ст.м. &laquo;Международная&raquo;.<br /> Квартира полностью оборудована для комфортного проживания:&nbsp;<br /> - 2 двуспальных дивана;&nbsp;<br /> - на кухне есть все для приготовления еды;&nbsp;<br /> - просторный санузел с душевой кабиной;&nbsp;<br /> - телевизор, Wi-Fi и проводной интернет, радио-CD-проигрыватель, стиральная машина, утюг и гладильная доска, платяной шкаф и проч.<br /> В квартире есть балкон.&nbsp;<br /> Этаж: 2/5<br /> Общая площадь:35 кв.м.</p>
+                                </div>
+                                <div class="btns">
+                                    <a class="btn btn-green its-mine" href="#">Да, именно это я и ищу!</a>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="itm">
+                            <div class="img-wrp">
+                                <div class="img">
+                                    <img src="http://stifgroup.ru/files/products/flat04_1.372x248.jpg?1947a41d9a965c3f4207eedcb508464c" alt="" />
+                                </div>
+                                <div class="price">
+                                    24000 P / мес.
+                                </div>
+                            </div>
+                            <div class="dsc-wrp">
+                                <h3 class="ttl">1 к.кв. квартира</h3>
+                                <div class="subway">
+                                    ст.м. «Проспект Просвещения»
+                                </div>
+                                <div class="dsc">
+                                    <p>1 к.кв. в Выборгском районе, в 15 минутах ходьбы от станции метро &laquo;проспект Просвещения&raquo;. Мебель и другие удобства: новая современная мебель, электроплита, металлическая дверь, домофон, посудомоечная машина, свч печь, электрический чайник, утюг с гладильной доской, фен, посуда и принадлежности, охраняемая территория, постельные принадлежности. Развитая инфраструктура: супермаркет &laquo;О'кей&raquo;, выезд на КАД, Мега Парнас, торговые комплексы. Остановка автобуса, трамвая в 2 минутах пешком.</p>
+                                </div>
+                                <div class="btns">
+                                    <a class="btn btn-green its-mine" href="#">Да, именно это я и ищу!</a>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="itm">
+                            <div class="img-wrp">
+                                <div class="img">
+                                    <img src="http://stifgroup.ru/files/products/flat05_1.372x248.jpg?9f0c0c1efe8bedada9cf09164fd907b1" alt="" />
+                                </div>
+                                <div class="price">
+                                    25000 P / мес.
+                                </div>
+                            </div>
+                            <div class="dsc-wrp">
+                                <h3 class="ttl">1 комнатная квартира</h3>
+                                <div class="subway">
+                                    ст. м. Пр. Просвещения (10 мин. пешком)
+                                </div>
+                                <div class="dsc">
+                                    <p>Сдается на длительный срок 1 к.кв. в шаговой доступности от ст.м. &laquo;Приморская&raquo;. Стильная, светлая просторная квартира располагает всем необходимым для комфортного проживания. В спальне двуспальная кровать, шкаф, комод, ЖК &ndash; телевизор, всё в классическом стиле. Большая гостиная с кухней. СВЧ &ndash; печь, стиральная машина, интернет, стеклопакеты, квартира после ремонта, современный стильный интерьер. Интернет - выделенная линия, доступ WI - FI. Кабельное телевиденье.<br /> Этаж: 8/16<br /> Общая площадь: 36 кв.м.</p>
+                                </div>
+                                <div class="btns">
+                                    <a class="btn btn-green its-mine" href="#">Да, именно это я и ищу!</a>
+                                </div>
+                            </div>
+                        </section>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <section id="sct-services" class="sct-services sct">
+            <div class="wrp ind">
+                <h2 class="hdr-c">Наши услуги</h2>
+
+                <div class="tabs">
+                    <ul class="lst">
+                        <li class="itm itm-0"><a class="btn btn-green active" href="#service-tab0">Снять</a></li>
+                        <li class="itm itm-1"><a class="btn btn-green " href="#service-tab1">Сдать</a></li>
+                        <li class="itm itm-2"><a class="btn btn-green " href="#service-tab2">Купить</a></li>
+                        <li class="itm itm-3"><a class="btn btn-green " href="#service-tab3">Продать</a></li>
+                    </ul>
+
+
+                    <div id="service-tab0" class="tab active">
+                        <div class="row">
+                            <div class="col col-1">
+                                <div class="img">
+                                    <img src="{{ asset('img/service01.png') }}" alt="" />
+                                </div>
+                            </div>
+                            <div class="col col-2">
+                                <div class="dsc-wrp">
+                                    <h3 class="ttl">Снять жилье</h3>
+                                    <div class="dsc typo">
+                                        <p>Каждый день база свободных квартир в аренду полностью обновляется. Чем дольше Вы ищете &ndash; тем меньше шансов, что Вы снимите именно тот вариант, который Вам понравился час назад.</p><p><span class="yellow big">Берегите свое время!</span></p><p>Позвоните <span class="green big">+ 7 (812) 387-22-33</span> и мы предложим Вам действительно актуальные варианты.</p>
+                                    </div>
+                                    <div class="btns">
+                                        <a href="#sct-articles:2" class="btn btn-yellow btn-trans scroll-to">Узнать подробнее</a>
+                                        <a class="btn btn-yellow want-it">Хочу Снять</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div id="service-tab1" class="tab ">
+                        <div class="row">
+                            <div class="col col-1">
+                                <div class="img">
+                                    <img src="{{ asset('img/service02.png') }}" alt="" />
+                                </div>
+                            </div>
+                            <div class="col col-2">
+                                <div class="dsc-wrp">
+                                    <h3 class="ttl">Сдать жилье</h3>
+                                    <div class="dsc typo">
+                                        <p><span class="green big">Единый центр недвижимости</span> предлагает сдать Вашу квартиру на лучших условиях!</p><p>Расширенный договор аренды - это <span class="yellow big">Ваша Гарантия!</span></p><p>Более 100 обращений арендаторов - это <span class="yellow big">Ваше Время!</span></p><p><span class="green big">Для Вас БЕСПЛАТНО:</span></p><p>- Оценка рыночной стоимости</p><p>- Эксклюзивный договор</p><p>- Личный менеджер</p>
+                                    </div>
+                                    <div class="btns">
+                                        <a href="#sct-articles:3" class="btn btn-yellow btn-trans scroll-to">Узнать подробнее</a>
+                                        <a class="btn btn-yellow want-it">Хочу Сдать</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div id="service-tab2" class="tab ">
+                        <div class="row">
+                            <div class="col col-1">
+                                <div class="img">
+                                    <img src="{{ asset('img/service03.png') }}" alt="" />
+                                </div>
+                            </div>
+                            <div class="col col-2">
+                                <div class="dsc-wrp">
+                                    <h3 class="ttl">Купить жилье</h3>
+                                    <div class="dsc typo">
+                                        <p>Оперативно. Выгодно. Безопасно.</p>
+                                        <p>Мы поможем найти и приобрести недвижимость, которая нужна именно Вам.</p>
+                                        <p>Просто позвоните <span class="green big">+ 7 (812) 387-22-33</span> и заберите свою квартиру!</p>
+
+                                    </div>
+                                    <div class="btns">
+                                        <a href="#sct-articles:4" class="btn btn-yellow btn-trans scroll-to">Узнать подробнее</a>
+                                        <a class="btn btn-yellow want-it">Хочу Купить</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div id="service-tab3" class="tab ">
+                        <div class="row">
+                            <div class="col col-1">
+                                <div class="img">
+                                    <img src="{{ asset('img/service04.png') }}" alt="" />
+                                </div>
+                            </div>
+                            <div class="col col-2">
+                                <div class="dsc-wrp">
+                                    <h3 class="ttl">Продать жилье</h3>
+                                    <div class="dsc typo">
+                                        <p>Вам не придется тратить время и силы на поиски покупателя. Наши специалисты об этом позаботяться, оградив Вас от всевозможных рисков и сопровождая сделку на всех ее этапах.
+                                            Звоните <span class="green big">+ 7 (812) 387-22-33 </span></p>
+
+                                    </div>
+                                    <div class="btns">
+                                        <a href="#sct-articles:5" class="btn btn-yellow btn-trans scroll-to">Узнать подробнее</a>
+                                        <a class="btn btn-yellow want-it">Хочу Продать</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+
+        <section id="sct-trust" class="sct-trust sct">
+
+            <div class="wrp bg-img">
+                <h2 class="hdr-l">Почему вы можете <span>нам доверять?</span></h2>
+                <div class="dsc typo">
+                    <p>Мы тщательно и кропотливо отбираем каждого партнера, поскольку именно это позволит  сэкономить Ваше время в будущем.<br/>Мы ограждаем Вас от мошенников, так как проверяем каждую квартиру и компанию на наличие и соответствие всех необходимых документов.</p><p><span class="big green">Работа с нами – гарантия успешного и долгосрочного заселения. </span><br/>И Вы в этом убедитесь.</p>
+                </div>
+                <div class="btns">
+                    <a href="#sct-reviews" class="btn btn-yellow btn-reviews scroll-to">Читать отзывы</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="sct-reviews" class="sct-reviews sct">
+            <div class="wrp ind">
+                <h2 class="hdr-c ttl">Отзывы <span>наших клиентов</span></h2>
+                <div class="tabs">
+                    <ul class="lst">
+                        <li class="itm"><a class="btn btn-green btn-sm active" href="#review-tab0">#Снять</a></li>
+                        <li class="itm"><a class="btn btn-green btn-sm " href="#review-tab1">#Сдать</a></li>
+                        <li class="itm"><a class="btn btn-green btn-sm " href="#review-tab2">#Купить</a></li>
+                        <li class="itm"><a class="btn btn-green btn-sm " href="#review-tab3">#Продать</a></li>
+                    </ul>
+                    <div class="tab active" id="review-tab0">
+                        <ul class="slider2">
+                            <li class="itm">
+                                <div class="row">
+                                    <div class="col col-1">
+                                        <div class="img">
+                                            <img src="http://stifgroup.ru/files/products/emptyface_3.119x118.png?8eb752f0c229032b577332b4354a88db" alt="" />
+                                        </div>
+                                    </div>
+                                    <div class="col col-2">
+                                        <div class="dsc">
+                                            <p>Самостоятельно искал квартиру в центре, снимал первый раз и не знал всех подводных камней в этом деле. Попытка снять дешевый вариант без комиссии обернулась мне боком..надули на 10 тыс, а о заселении так вообще речи быть не могло. Такого ужаса я еще не встречал. В Стиф позвонил и честно говоря не сильно верил в удачу после такого разочарования. Взял трубку агент Андрей, и внимательно выслушав меня, все подробно разъяснил что и как на самом деле обстоит. Жаль, что не обратился к ребятам раньше, столько времени потратил ..и денег. Ребята довольно быстро подобрали мне хороший и доступный вариант. После заселения даже пару раз звонили спрашивали все ли хорошо, было очень приятно! Огромное спасибо за помощь и чуткое, внимательное отношение!</p>
+                                            <div class="lrw captions">
+                                                <div class="l lft name">
+                                                    Роман Рустамов
+                                                </div>
+                                                <div class="r rght date">
+                                                    12.11.2014 г.
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab " id="review-tab1">
+                        <ul class="slider2">
+                            <li class="itm">
+                                <div class="row">
+                                    <div class="col col-1">
+                                        <div class="img">
+                                            <img src="http://stifgroup.ru/files/products/emptyface_4.119x118.png?2e647f5f9c7a49fa417185910b24c7cb" alt="" />
+                                        </div>
+                                    </div>
+                                    <div class="col col-2">
+                                        <div class="dsc">
+                                            <p>Через ребят нашел арендаторов, сдали 2 комнаты за один день! Сработали очень грамотно и оперативно, и учли все мои пожелания. Спасибо Андрею, Анне, и всему Стифу за помощь в поиске и вашу внимательность!</p>
+                                            <div class="lrw captions">
+                                                <div class="l lft name">
+                                                    Денис Станюкович
+                                                </div>
+                                                <div class="r rght date">
+                                                    06.05.2014 г.
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="itm">
+                                <div class="row">
+                                    <div class="col col-1">
+                                        <div class="img">
+                                            <img src="http://stifgroup.ru/files/products/emptyface_6.119x118.png?c590cdb05275c0f4843ea36b6e4f4ab1" alt="" />
+                                        </div>
+                                    </div>
+                                    <div class="col col-2">
+                                        <div class="dsc">
+                                            <p>Искала, кому могу сдать свою однушку. Квартира после ремонта, с новой мебелью.. И разумеется, было не все равно кого в нее заселять. Самостоятельно, через знакомых найти, увы, не получилось.. Цену конечно хотела не маленькую, но за меньшие деньги сдавать квартиру с такими идеальными условиями не хотелось совсем. В процессе такого поиска один знакомый дал номер агента Анны, и я не долго думая позвонила. Не прошло и дня как нашлись порядочные, хорошие съемщики, которых мы и заселили. Спасибо Анне и всей вашей команде! Вы &mdash; настоящие профессионалы!</p>
+                                            <div class="lrw captions">
+                                                <div class="l lft name">
+                                                    Лариса Андриенко
+                                                </div>
+                                                <div class="r rght date">
+                                                    29.08.2014 г.
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab " id="review-tab2">
+                        <ul class="slider2">
+                            <li class="itm">
+                                <div class="row">
+                                    <div class="col col-1">
+                                        <div class="img">
+                                            <img src="http://stifgroup.ru/files/products/emptyface.119x118.png?f3fb2e36eda6b10ee5cd4e2dd4e993f2" alt="" />
+                                        </div>
+                                    </div>
+                                    <div class="col col-2">
+                                        <div class="dsc">
+                                            <p>Выражаю всей компании СТИФ огромную благодарность за помощь в поиске и приобретении жилья! За ваш креативный подход, за грамотное и внимательное отношение! Я приятно удивлена, насколько четко, быстро вы провернули все это дело и помогли со всеми документами. Я наконец то живу в квартире своей мечты, спасибо ВАМ!!</p>
+                                            <div class="lrw captions">
+                                                <div class="l lft name">
+                                                    Анастасия Самуткевич
+                                                </div>
+                                                <div class="r rght date">
+                                                    16.03.2014 г.
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab " id="review-tab3">
+                        <ul class="slider2">
+                            <li class="itm">
+                                <div class="row">
+                                    <div class="col col-1">
+                                        <div class="img">
+                                            <img src="http://stifgroup.ru/files/products/emptyface_1.119x118.png?6e86ef4a841c9de0c4d9bab07135a218" alt="" />
+                                        </div>
+                                    </div>
+                                    <div class="col col-2">
+                                        <div class="dsc">
+                                            <p>Продала квартиру через агентство Стиф. Очень понравилось отношение компании к делу. Во всем доходчиво помогли разобраться и всю возню с документами сделали за меня. Я присутствовала уже непосредственно на продаже. Довольна работой Стифа и за покупателей!))</p>
+                                            <div class="lrw captions">
+                                                <div class="l lft name">
+                                                    Нина Захарцева
+                                                </div>
+                                                <div class="r rght date">
+                                                    06.08.2014 г.
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="itm">
+                                <div class="row">
+                                    <div class="col col-1">
+                                        <div class="img">
+                                            <img src="http://stifgroup.ru/files/products/emptyface_2.119x118.png?45fa7f3d12621b5e5a90ada897a0dfc1" alt="" />
+                                        </div>
+                                    </div>
+                                    <div class="col col-2">
+                                        <div class="dsc">
+                                            <p>Мы с женой искали квартиру, хотели переехать от родителей. Попытка найти жилье через интернет оказалась провальной, ездили на просмотры дня 4, так ничего не подобрали. Либо отвратительные условия, либо слишком дорого.. Мы обратились в Стиф и буквально через полчаса нам подобрали сразу 3 варианта в нужном районе, и которые были нам по карману. В этот же день поехали смотреть, а на просмотре второй варианта заключили договор. Нашли то, что надо! Живем уже 2.5 месяца, и очень довольны.</p><p>Чистота, новый ремонт и адекватный хороший собственник! Спасибо Стифу!</p>
+                                            <div class="lrw captions">
+                                                <div class="l lft name">
+                                                    Михаил Ветюгов
+                                                </div>
+                                                <div class="r rght date">
+                                                    07.10.2014 г.
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <br/>
+                <a class="btn btn-green scroll-to" href="#sct-map">Оставить отзыв</a>
+            </div>
+        </section>
+
+        <section id="sct-articles" class="sct-articles sct">
+            <div class="row wrp">
+                <div class="col col-1">
+                    <h2 class="hdr-l">Ответы на вопросы</h2>
+                    <div class="tabs">
+                        <ul class="lst">
+                            <li class="itm"><a class="btn btn-green btn-sm active" href="#artf-tab-2">#Снять</a></li>
+                            <li class="itm"><a class="btn btn-green btn-sm " href="#artf-tab-3">#Сдать</a></li>
+                            <li class="itm"><a class="btn btn-green btn-sm " href="#artf-tab-4">#Купить</a></li>
+                            <li class="itm"><a class="btn btn-green btn-sm " href="#artf-tab-5">#Продать</a></li>
+                        </ul>
+
+                        <div class="tab active" id="artf-tab-2">
+                            <ul class="art-btns">
+                                <li><a href="#arts-tab-0" class="btn btn-green">В какой срок можно снять квартиру?</a></li>
+                                <li><a href="#arts-tab-1" class="btn btn-green">Может ли хозяин квартиры вдруг поднять арендную плату?</a></li>
+                                <li><a href="#arts-tab-2" class="btn btn-green">За что взимается комиссия?</a></li>
+                                <li><a href="#arts-tab-3" class="btn btn-green">Кто оплачивает коммунальные услуги</a></li>
+                                <li><a href="#arts-tab-4" class="btn btn-green">Я хочу снять квартиру, что дальше?</a></li>
+                            </ul>
+                        </div>
+                        <div class="tab " id="artf-tab-3">
+                            <ul class="art-btns">
+                                <li><a href="#arts-tab-5" class="btn btn-green">Документы, необходимые для заключения сделки по аренде жилья</a></li>
+                                <li><a href="#arts-tab-6" class="btn btn-green">Как правильно сдать жилье?</a></li>
+                                <li><a href="#arts-tab-7" class="btn btn-green">Кто будет жить в моей квартире?</a></li>
+                            </ul>
+                        </div>
+                        <div class="tab " id="artf-tab-4">
+                            <ul class="art-btns">
+                                <li><a href="#arts-tab-8" class="btn btn-green">3 шага до покупки жилья</a></li>
+                            </ul>
+                        </div>
+                        <div class="tab " id="artf-tab-5">
+                            <ul class="art-btns">
+                                <li><a href="#arts-tab-9" class="btn btn-green">Что нужно, чтобы быстро продать жилье?</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col col-2">
+                    <div id="arts-tab-0" class="art-tab tab-s active">
+                        <h3 class="hdr-l">В какой срок можно снять квартиру?</h3>
+                        <div class="dsc typo">
+                            <p></p><p>Сроки аренды зависят напрямую от Ваших требований и суммы, которую Вы готовы потратить. Соответственно, чем больше требований, тем больше срок поиска подходящих вариантов.</p><p></p><p>Сумма, как правило, зависит от местарасположения, ремонта, наличия мебели, срока аренды.</p><p></p><p>В среднем, Вы можете подобрать и заселиться в Вашу новую квартиру в течении 2 суток. Либо при срочном заселении в 1 сутки.</p>
+
+                        </div>
+                        <div class="pagination">
+                            <!-- todo: сделать пагинацию, потом, возможно -->
+                        </div>
+                    </div>
+                    <div id="arts-tab-1" class="art-tab tab-s ">
+                        <h3 class="hdr-l">Может ли хозяин квартиры вдруг поднять арендную плату?</h3>
+                        <div class="dsc typo">
+                            <p></p><p>Нет, в договоре, который мы заключаем на 11 месяцев, прописано, что хозяин не имеет права поднимать арендную плату в течение всего срока действия договора.</p><p>Только по его окончанию, либо продлению на следующие 11 месяцев.</p>
+
+                        </div>
+                        <div class="pagination">
+                            <!-- todo: сделать пагинацию, потом, возможно -->
+                        </div>
+                    </div>
+                    <div id="arts-tab-2" class="art-tab tab-s ">
+                        <h3 class="hdr-l">За что взимается комиссия?</h3>
+                        <div class="dsc typo">
+                            <p></p><p><strong>Процесс поиска недвижимости &ndash; обоюдная ответственность.</strong></p><p>Агентства недвижимости работают без предоплаты и берут деньги за услуги по поиску подходящих вариантов квартир. Клиент платит только в том случае, если найденный вариант ему подходит. Если клиент обращается в несколько агентств, заработает только одно из них, остальные ничего не получат.</p><p>Агентствам недвижимости не выгодно работать при комиссии меньше 100 %. Этот размер комиссии не такой высокий, если посмотреть какие расходы несет агентство недвижимости при осуществлении своей деятельности:</p><ul><li>Выезды на объекты и их показ;</li><li>Транспортные расходы;</li><li>Расходы, связанные с оргтехникой, Интернетом, мобильной связью и созданием базы данных недвижимости;</li><li>Расходы на рекламу;</li><li>Оплата за арендное помещение;</li><li>Риелторам порой приходится работать &laquo;от и до&raquo;;</li><li>Прочие расходы.</li></ul><p>Как мы видим, комиссия в размере стоимости одного месяца аренды не такая уже и большая.</p><p>Получив предложение с более низкой комиссией, может оказаться так, что его делает информационное агентство недвижимости. Такие агентства взимают плату во время подписания договора об оказании информационных услуг до просмотра объекта недвижимости. Чаще всего просмотра не будет, так как объекты недвижимости неправдивые, а их &laquo;хозяева&raquo; во время разговора с Вами по телефону сидят где-то за стенкой. Вернуть свои кровные вряд ли получится, так как такие &laquo;агентства&raquo; исполнили свои условия заключенного договора. Не соглашайтесь оплачивать комиссию агентства до просмотра квартиры.</p>
+
+                        </div>
+                        <div class="pagination">
+                            <!-- todo: сделать пагинацию, потом, возможно -->
+                        </div>
+                    </div>
+                    <div id="arts-tab-3" class="art-tab tab-s ">
+                        <h3 class="hdr-l">Кто оплачивает коммунальные услуги</h3>
+                        <div class="dsc typo">
+                            <p></p><p>Коммунальные услуги как правило, оплачиваются отдельно от ежемесячной суммы аренды. Для своих клиентов мы стараемся получить наилучший вариант: оплата, исключительно, расходников, то есть: свет, вода, газ, электричество, телефон. Но есть и ряд квартир, в стоимость которых уже включены коммунальные услуги.</p>
+
+                        </div>
+                        <div class="pagination">
+                            <!-- todo: сделать пагинацию, потом, возможно -->
+                        </div>
+                    </div>
+                    <div id="arts-tab-4" class="art-tab tab-s ">
+                        <h3 class="hdr-l">Я хочу снять квартиру, что дальше?</h3>
+                        <div class="dsc typo">
+                            <p></p><p>Поиском жилья на рынке аренды в нашем агентстве занимаются сразу несколько риелторов. Уже через 15 минут после того, как вы подадите заявку, вам позвонит наш сотрудник и предложит несколько вариантов, соответствующих вашим требованиям. Через 30-35 минут мы сообщим Вам, кто из собственников готов принять Вас в своей квартире, с учетом всех нюансов (домашние животные, маленькие дети и т.д.). Когда мы отберем лучшие варианты, соответствующие Вашим требованиям, риелторы сразу же созваниваются с собственниками квартир и назначают удобное время для просмотра. Буквально через полтора часа после обращения к нам, у Вас будет несколько реальных вариантов. Вам останется посмотреть квартиру (дом, комнату) и принять окончательное решение. Но и здесь мы Вас не оставим!</p><ul><li>Во-первых, наш сотрудник отправится на просмотр вместе с Вами. К тому же, мы готовы организовать ваш путь к объектам просмотра на служебном автомобиле &laquo;Стиф Групп&raquo;.</li><li>Во-вторых, мы действуем в Ваших интересах в общении с собственником, а именно разбиваем залог на несколько месяцев, договариваемся об оплате только за использованные ресурсы (вода/газ/счетчики/телефон), остальное Вас не должно волновать и бить по Вашему кошельку.</li><li>В-третьих, мы проследим за правильностью оформления документов и ваш контракт с хозяином квартиры будет иметь юридическую силу.</li></ul><p>А еще от наших сотрудников вы сможете узнать все те нюансы, о которых хозяева деликатно умалчивают. Мы не будем скрывать от Вас правду. &hellip; и при всем этом, за свои услуги мы возьмем только 90%* от месяца аренды. А вы получите квартиру (дом, комнату), где вам будет комфортно жить долгие месяцы (или годы).</p><p><b>*</b> при заключении эксклюзивного договора мы сделаем вам скидку 10%.</p>
+
+                        </div>
+                        <div class="pagination">
+                            <!-- todo: сделать пагинацию, потом, возможно -->
+                        </div>
+                    </div>
+                    <div id="arts-tab-5" class="art-tab tab-s ">
+                        <h3 class="hdr-l">Документы, необходимые для заключения сделки по аренде жилья</h3>
+                        <div class="dsc typo">
+                            <p></p><p>Для заключения сделки по аренде жилого помещения необходимы:</p><p></p><ul><li>Правоустанавливающие документы</li><li>Свидетельство о собственности</li><li>Паспорт</li><li>Нотариальная доверенность (в случае представления интересов собственника)</li><li>Только оригиналы документов</li></ul>
+
+                        </div>
+                        <div class="pagination">
+                            <!-- todo: сделать пагинацию, потом, возможно -->
+                        </div>
+                    </div>
+                    <div id="arts-tab-6" class="art-tab tab-s ">
+                        <h3 class="hdr-l">Как правильно сдать жилье?</h3>
+                        <div class="dsc typo">
+                            <p></p><p>Какую сумму вы хотите получать от квартирантов ежемесячно?</p><p>А теперь представьте, что каждый день часть этих денег вы теряете только потому, что вам не звонят/не подходят потенциальные жильцы. Возьмите ситуацию в свои руки и позвоните в агентство недвижимости &laquo;Стиф Груп&raquo;! Тел.&nbsp;<strong>+7 (812)&nbsp;387-22-33</strong>&nbsp;</p><p>Так вы сделаете первый шаг к тому, чтобы получать пассивный доход от недвижимости.</p><ul><li>Сразу же после того, как наш сотрудник согласует с вами детали, команда риелторов начнет заниматься поиском и привлечением потенциальных жильцов.</li><li>Искать квартирантов будут 3-4 наших риелтора одновременно. Эти люди имеют колоссальную подготовку, и результат не заставит себя долго ждать.</li></ul>
+
+                        </div>
+                        <div class="pagination">
+                            <!-- todo: сделать пагинацию, потом, возможно -->
+                        </div>
+                    </div>
+                    <div id="arts-tab-7" class="art-tab tab-s ">
+                        <h3 class="hdr-l">Кто будет жить в моей квартире?</h3>
+                        <div class="dsc typo">
+                            <p></p><p>Никаких рисков!&nbsp;<span style="line-height: inherit;">Мы приведем к Вам только тех людей, которые соответствуют вашим пожеланиям. Конечно, мы не сможем на все <b>100%</b> гарантировать их аккуратность в быту. Но с каждым из них мы будем проводить небольшое собеседование, и каждому будем рассказывать о ваших требованиях. А при заселении мы поможем вам оформить контракт с будущими жильцами и защитить себя юридически. Наше сотрудничество будет эффективней, если:</span></p><ul><li>Вы честно расскажете нам обо всех нюансах.</li></ul><p>Дело в том, что мы несем определенную ответственность перед квартирантами, и просто не можем врать им.</p><ul><li>Заключите эксклюзивный договор с нашей компанией.</li></ul><p>Это значит, что мы официально обязуемся найти вам жильцов, а вы полностью доверяетесь нам и не обращаетесь в другие компании.</p>
+
+                        </div>
+                        <div class="pagination">
+                            <!-- todo: сделать пагинацию, потом, возможно -->
+                        </div>
+                    </div>
+                    <div id="arts-tab-8" class="art-tab tab-s ">
+                        <h3 class="hdr-l">3 шага до покупки жилья</h3>
+                        <div class="dsc typo">
+                            <p></p><p>Мы знаем, как найти квартиру, где Вы хотели бы жить. И мы готовы отвезти Вас туда и организовать сделку ее покупки. Что для этого нужно сделать вам:</p><ul>Шаг 1.<li>Связаться с нами.&nbsp;<span style="line-height: inherit;"> <br />Позвонить по номеру&nbsp;</span><strong>+7 (812)&nbsp;387-22-33 </strong>или оставить заявку онлайн (мы сами с Вами свяжемся).</li>Шаг 2.<li>Рассказать, какое жилье вы хотите купить (в каком районе, из какой ценовой категории, на каком этаже, и так далее).</li>Шаг 3.<li>Заключить эксклюзивный договор с агентством &laquo;Стиф Груп&raquo;. Так мы будем знать, что Вы &ndash; только наш клиент, и что мы делаем свою работу не напрасно. Вы же получите быстрый результат: в течение суток мы предоставим вам несколько стоящих вариантов. А если они по каким-то причинам вам не подойдут, мы будем искать для вас подходящий объект недвижимости, пока вы не останетесь довольны!</li></ul><p>&hellip;а когда вы скажете нам, что квартира (дом, дача) вам понравилась, и вы готовы хоть завтра отдать за нее деньги, мы не оставим Вас &laquo;тет а тет&raquo; с продавцом. Одна из наших задач &ndash; обезопасить своего клиента от мошенников. Именно поэтому риелторы &laquo;Стиф Груп&raquo; всегда доводят процесс приобретения жилья до конца: мы возьмем на себя сопровождение сделки. Еще до того, как предлагать вам объект, мы проверим его юридическую чистоту.</p>
+
+                        </div>
+                        <div class="pagination">
+                            <!-- todo: сделать пагинацию, потом, возможно -->
+                        </div>
+                    </div>
+                    <div id="arts-tab-9" class="art-tab tab-s ">
+                        <h3 class="hdr-l">Что нужно, чтобы быстро продать жилье?</h3>
+                        <div class="dsc typo">
+                            <p></p><p>Для каждого клиента агентства &laquo;Стиф Груп&raquo; продажа недвижимости &ndash; это простой и быстрый процесс. Ведь ему нужно только:</p><ul><li>Назначить цену.</li><li>Передать ключи от квартиры/дома риелтору и заключить эксклюзивный договор (такой документ дает и агентству, и клиенту гарантию того, что продажа состоится; а если это договор со &laquo;Стиф Груп&raquo;, он даст еще и скидку в 10%).</li><li>Приехать на сделку, чтобы подписать бумаги и получить деньги от покупателей.</li><li>Оплатить услуги агентства.</li></ul><p>Если Вам нравится такая схема продажи дома/квартиры/участка, то Вы &ndash; наш клиент! Звоните&nbsp;<strong>+7 (812) 387-22-33 .</strong> Как только Вы поручите объект сотрудникам &laquo;Стиф Груп&raquo;, о нем буквально через пару часов узнают сотни потенциальных покупателей из Санкт-Петербурга и других городов России. И общаться с ними тоже будем мы. Вы можете быть уверены, что мы предоставим Вам результат быстро: в нашем распоряжении огромная клиентская база. У нас есть ресурсы, чтобы хорошо прорекламировать Ваш объект недвижимости и привлечь к нему внимание. Наша цель &ndash; довести сделку до конца! А это значит, что мы не только приведем Вам покупателей, но и подготовим документы, а также проследим за безопасной передачей крупной суммы денег. Становитесь клиентом &laquo;Стиф Груп&raquo;: возможно, прямо сейчас в нашей базе есть несколько покупателей, которым понравится Ваш объект недвижимости.</p>
+
+                        </div>
+                        <div class="pagination">
+                            <!-- todo: сделать пагинацию, потом, возможно -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sct-map" class="sct-map sct">
+            <div id="map" class="map">
+
+            </div>
+            <div class="ftr-frm">
+                <div class="row">
+                    <div class="col col-1">
+
+                    </div>
+                    <div class="col col-2">
+                        <div class="wrp-frm">
+
+
+                            <h2 class="hdr-r ttl">Нас легко найти</h2>
+
+                            <address class="address">
+                                г. Санкт-Петербург, <br/>
+                                Московский проспект, д. 165 (м. Парк Победы)<br/>
+                                без выходных с 10.00-20.00
+                                <p></p>
+                                e-mail: mail@stifgroup.ru
+                            </address>
+                            <address class="phone">+7 <span>(812)</span> 985-22-44</address>
+                            <div class="str-1"></div>
+                            <address class="phone">+7 <span>(812)</span> 387-22-33</address>
+                            <div class="str-1"></div>
+
+                            <div class="str-2">Можете зайти к нам в гости или</div>
+                            <div class="str-3">оставить заявку</div>
+
+                            <div class="frm">
+                                <form id="callback-frm">
+                                    <input data-format=".+" data-notice="Введите имя" type="text" name="name" placeholder="Ваше имя"/>
+                                    <input data-format=".+" data-notice="Введите телефон" type="text" name="phone" placeholder="Ваш телефон"/>
+                                    <input  data-format="email" data-notice="Введите email" type="text" name="email" placeholder="Ваш e-mail"/>
+                                    <input type="text" name="theme" placeholder="Тема сообщения"/>
+                                    <textarea name="message" placeholder="Текст Вашего сообщения"></textarea>
+                                    <input id="callback-btn" class="btn btn-trans" type="submit" value="Отправить"/>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <footer id="pg-ftr" class="pg-ftr sct">
+            <div class="lrw wrp">
+                <div class="l copyright">
+    {% if app.isGranted('ROLE_USER') %}
+        <strong>{{ app.user.username }}</strong> - <a href="{{ url('logout') }}">Выйти</a> &copy;
+        {% else %}
+                <a href="{{ url('login') }}" rel="nofollow">&copy;</a>
+            {% endif %}
+                    2014 Единый центр недвижимости “СТИФ Group” г. Санкт-Петербург
+                </div>
+                <div class="r logo2"><a href="http://www.softformula.com" title="создание сайтов" target="_blank"><img src="{{ asset('img/softformula.png') }}" alt="создание сайтов" /></a> </div>
+            </div>
+        </footer>
+        <a href="#" id="up"></a>
+
+    </div>
+
+{% endblock %}

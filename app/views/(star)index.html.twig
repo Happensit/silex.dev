@@ -1,0 +1,39 @@
+{% extends 'layout.twig' %}
+{% block body %}
+    <div class="outer pg-front">
+    <nav class="sct-menu sct" id="sct-menu">
+        <div class="wrp mnh">
+            <ul class="row l">
+                <li class="col"><a href="#sct-main">Как это работает</a></li>
+                <li class="col"><a href="#sct-services">Услуги</a></li>
+                <li class="col"><a href="#sct-trust">Преимущества</a></li>
+                <li class="col"><a href="#sct-reviews">Отзывы</a></li>
+                <li class="col"><a href="#sct-articles">Интересное</a></li>
+                <li class="col"><a href="#sct-map">Контакты</a></li>
+            </ul>
+
+            <div class="soc r">
+                <a rel="nofollow" href="http://vk.com/stifgroup" class="vk no-scroll"></a>
+                <a rel="nofollow" href="#" class="skype no-scroll"></a>
+                <a rel="nofollow" href="#" class="fb no-scroll"></a>
+            </div>
+            <div class="clr"></div>
+        </div>
+    </nav>
+    <div class="wrp sdat-wrp"><a href="#sct-services" class="sdat rght btn btn-yellow scroll-to">ХОЧУ СДАТЬ ЖИЛЬЁ</a></div>
+
+
+
+    {% if app.isGranted('ROLE_USER') %}
+        {{ app.user.username }} - <a href="{{ url('logout') }}">{{ 'logout'|trans() }}</a>
+    {% else %}
+        <a href="{{ url('login') }}">{{ 'login'|trans() }}</a>
+        or
+        <a href="{{ url('register') }}">{{ 'register'|trans() }}</a>
+    {% endif %}
+
+    <form action="{{ path('contact') }}" method="post">
+        {{ form_widget(form) }}
+    </form>
+    
+{% endblock %}

@@ -1,0 +1,8 @@
+{% extends 'layout.twig' %}
+{% block body %}
+    <h1>Форма обратной связи</h1>
+
+    <form action="{{ path('ajaxOrderAction') }}" method="post">
+        {{ form_widget(form) }}
+    </form>
+{% endblock %}

@@ -1,0 +1,42 @@
+{
+  "version": "1.1.4",
+  "name": "jquery-backgroundpos",
+  "titl": "jQuery Background Position",
+  "author": {
+    "name": "Keith Wood",
+    "email": "kbwood{at}iinet.com.au",
+    "url": "http://keith-wood.name/backgroundPos.html"
+  },
+  "homepage": "https://github.com/malas34/jquery-backgroundpos",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/malas34/jquery-backgroundpos"
+  },
+  "licence": {
+    "type": "MIT",
+    "url": "http://opensource.org/licenses/MIT"
+  },
+  "main": "src/jquery.backgroundpos.js",
+  "ignore": [
+    ".gitattributes",
+    ".gitignore"
+  ],
+  "keywords": [
+    "background",
+    "position",
+    "jquery",
+    "jquery-backgroundposition",
+    "jquery-backgroundpos",
+    "backgroundpos",
+    "backgroundposition"
+  ],
+  "_release": "1.1.4",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.1.4",
+    "commit": "5408643f5ff422a997989e2d7241c4e414e54dad"
+  },
+  "_source": "git://github.com/malas34/jquery-backgroundpos.git",
+  "_target": "*",
+  "_originalSource": "jquery-backgroundpos"
+}

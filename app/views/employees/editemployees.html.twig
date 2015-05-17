@@ -1,0 +1,15 @@
+{% extends 'layout.twig' %}
+{% block body %}
+    <h1>Редактирование сотрудника</h1>
+
+    {% if message is not empty %}
+        <div>
+            <h4>{{ message }}</h4>
+        </div>
+    {% endif %}
+
+    <form action="/employee/{{ entity_id }}/edit" method="post">
+        {{ form_widget(form) }}
+        <button class="btn btn-green" type="submit">Сохранить</button>
+    </form>
+{% endblock %}

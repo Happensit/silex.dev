@@ -1,0 +1,41 @@
+{# employees/index.html.twig #}
+{% extends 'layout.twig' %}
+
+{% block body %}
+
+    <h1>Сотрудники</h1>
+
+    {% for message in app.session.getFlashBag.get('message') %}
+        <div style="
+                            padding: 15px; margin-bottom: 20px; border: 1px solid transparent; border-radius: 4px;
+                            padding-right: 35px;
+                    {% if message.type == "success" %}
+                            color: #3c763d; background-color: #b9df90; border-color: #a0d468;
+                    {% elseif message.type == "error" %}
+                            color: #a94442; background-color: #f2838f; border-color: #ed5565;
+                    {% elseif message.type == "warning" %}
+                            color: #8a6d3b; background-color: #ffdd87; border-color: #ffce54;
+                    {% elseif message.type == "info" %}
+                            color: #31708f; background-color: #7cd1ef; border-color: #4fc1e9;
+                    {% endif %}
+                            ">
+            <button type="button" class="alert-close">
+                &times;
+            </button>
+            {{ message.content | raw }}
+        </div>
+    {% endfor %}
+
+<article class="employees">
+    {% for employee in employees %}
+
+        <article>
+            <img src="{{ asset('uploads/employees') }}/{{ employee.path }}" />
+            <h2>{{ employee.name }}</h2>
+            <p>{{ employee.description }}</p>
+        </article>
+
+    {% endfor %}
+</article>
+
+{% endblock %}
